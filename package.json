@@ -4,6 +4,7 @@
   "description": "Template for console apps",
   "main": "build/index.js",
   "scripts": {
+    "build": "babel -w -d build/ src/",
     "compile": "babel -d build/ src/",
     "prepublish": "npm run compile",
     "test": "npm run compile && mocha --compilers js:babel-core/register"
@@ -11,6 +12,7 @@
   "bin": {
     "app": "build/index.js"
   },
+  "preferGlobal": true,
   "repository": {
     "type": "git",
     "url": "git+https://github.com/stepin/console-app-blank-js.git"

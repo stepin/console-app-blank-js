@@ -2,7 +2,7 @@
 set -e
 
 if [ "$1" = 'bash' ]; then
-    $@
-else
-    app $@
+    exec "$@"
 fi
+
+exec app "$@"
